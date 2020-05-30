@@ -1,5 +1,6 @@
 
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.response import Response
 from sistema.models import SistemaCliente
 from .serializers import  SistemaSerializer
 
@@ -14,6 +15,8 @@ class SistemaviewSet(ModelViewSet):
         return queryset
 
     def list (self, request, *args, **kwargs):
-        return SistemaCliente.objects.all()
+        queryset = SistemaCliente.objects.all()
+        serializer = SistemaSerializer(queryset, many=True)
+        return Response(serializer.data)
 
   

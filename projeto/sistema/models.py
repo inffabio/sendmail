@@ -7,6 +7,7 @@ class SistemaCliente(models.Model):
     SenhaServidor = models.CharField(max_length=50)
     Porta = models.IntegerField()
     SSL =  models.BooleanField(default=False)
+    RodapeImagem = models.ImageField(upload_to="rodapeEmail", null=True, blank=True)
 
 	
     def __str__(self):

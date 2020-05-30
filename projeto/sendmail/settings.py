@@ -123,3 +123,6 @@ USE_TZ = True
 
 STATIC_ROOT ="/var/www/vhosts/vps.ecosologic.com.br/sendmail.vps.ecosologic.com.br/static/"
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = 'imagens'
+MEDIA_URL = '/media/'
