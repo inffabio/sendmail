@@ -13,7 +13,7 @@ class SistemaviewSet(ModelViewSet):
         queryset = SistemaCliente.objects.filter(Sistema=sistema)
         return queryset
 
-    def List (self, request, *args, **kwargs):
+    def list (self, request, *args, **kwargs):
         return SistemaCliente.objects.all()
 
   
